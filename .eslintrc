@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "no-else-return": "error",
+    "prefer-destructuring": "warn",
+    "complexity": ["error", 3],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "max-params": ["error", 4],
+    "max-lines-per-function": ["error", 21]
+  }
+}
